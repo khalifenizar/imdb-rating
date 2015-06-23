@@ -9,7 +9,13 @@ class BarGraph
     10.times do |score|
       score = 10 - score
 
-      line = "#{score}: "
+      if score < 10
+        str = " #{score}"
+      else
+        str = score.to_s
+      end
+
+      line = "#{str}: "
       @numbers.each do |number|
         if number >= score
           line += "#"
