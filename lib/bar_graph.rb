@@ -18,13 +18,13 @@ class BarGraph
       line = "#{str}: "
       @numbers.each do |number|
         if number >= score
-          line += "#"
+          line += "|#"
         else
-          line += " "
+          line += "| "
         end
       end
 
-      graph += line + "\n"
+      graph += line + "|\n"
     end
 
     return graph
